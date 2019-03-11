@@ -38,4 +38,5 @@
     <string name="buttonHome">Navigate to Home</string>
     <string name="title_profile">Logged In User</string>
     <string name="FoodRater">FoodRater</string>
+    <string name="helpTitle">Help Screen</string>
 </resources>

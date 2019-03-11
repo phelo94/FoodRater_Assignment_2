@@ -3,7 +3,7 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
 
-    lintOptions{
+    lintOptions {
         checkReleaseBuilds false
 
     }

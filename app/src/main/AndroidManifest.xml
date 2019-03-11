@@ -3,25 +3,26 @@
     package="ie.food">
 
     <application
-        android:name="ie.food.main.FoodRaterApp"
+        android:name=".main.FoodRaterApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Food Rater"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="ie.food.journal.JournalActivity" />
-        <activity android:name="ie.food.journal.JournalListActivity" />
-        <activity android:name="ie.food.registration.ProfileActivity" />
-        <activity android:name="ie.food.registration.LoginActivity" />
-        <activity android:name="ie.food.registration.SignUpActivity" />
+        <activity android:name=".activities.Help"></activity>
+        <activity android:name=".journal.JournalActivity" />
+        <activity android:name=".journal.JournalListActivity" />
+        <activity android:name=".registration.ProfileActivity" />
+        <activity android:name=".registration.LoginActivity" />
+        <activity android:name=".registration.SignUpActivity" />
         <activity
-            android:name="ie.food.notes.NewMealActivity"
-            android:parentActivityName="ie.food.notes.MealActivity" />
+            android:name=".notes.NewMealActivity"
+            android:parentActivityName=".notes.MealActivity" />
         <activity
-            android:name="ie.food.notes.MealActivity"
+            android:name=".notes.MealActivity"
             android:launchMode="singleTop" />
         <activity
-            android:name="ie.food.activities.Splash"
+            android:name=".activities.Splash"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar">
@@ -32,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="ie.food.activities.Home"
+            android:name=".activities.Home"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
 

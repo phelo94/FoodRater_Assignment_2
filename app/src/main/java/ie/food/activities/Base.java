@@ -53,7 +53,7 @@ public class Base extends AppCompatActivity {
 
     public void menuHelp(MenuItem m)
     {
-
+        startActivity(new Intent(this, Help.class));
     }
 
     public void menuNote(MenuItem m)
