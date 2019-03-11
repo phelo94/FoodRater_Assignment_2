@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ie.food">
+
+    <application
+        android:name="ie.food.main.FoodRaterApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Food Rater"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="ie.food.journal.JournalActivity" />
+        <activity android:name="ie.food.journal.JournalListActivity" />
+        <activity android:name="ie.food.registration.ProfileActivity" />
+        <activity android:name="ie.food.registration.LoginActivity" />
+        <activity android:name="ie.food.registration.SignUpActivity" />
+        <activity
+            android:name="ie.food.notes.NewMealActivity"
+            android:parentActivityName="ie.food.notes.MealActivity" />
+        <activity
+            android:name="ie.food.notes.MealActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="ie.food.activities.Splash"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ie.food.activities.Home"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
