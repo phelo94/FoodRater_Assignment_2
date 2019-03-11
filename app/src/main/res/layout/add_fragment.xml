@@ -28,10 +28,10 @@
         android:id="@+id/addPriceTV"
         android:layout_width="99dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:paddingTop="10dp"
         android:text="@string/coffeePriceLbl"
         android:textAlignment="textEnd"
@@ -42,7 +42,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285" />
+        app:layout_constraintVertical_bias="0.287" />
 
     <TextView
         android:id="@+id/addShopTV"
@@ -68,8 +68,8 @@
         android:id="@+id/addNameTV"
         android:layout_width="99dp"
         android:layout_height="43dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="36dp"
+        android:layout_marginEnd="8dp"
         android:paddingTop="10dp"
         android:text="@string/coffeeNameLbl"
         android:textAlignment="textEnd"
@@ -80,7 +80,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.694" />
+        app:layout_constraintVertical_bias="0.718" />
 
     <EditText
         android:id="@+id/addNameET"
@@ -145,16 +145,16 @@
 
     <Button
         android:id="@+id/addFoodButton"
-        android:elevation="5dp"
         android:layout_width="79dp"
         android:layout_height="84dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="124dp"
         android:background="@color/colorFontOffWhite"
         android:drawableTop="@drawable/blue_add_48"
+        android:elevation="5dp"
         android:text="@string/addCoffeeBtnLbl"
         app:layout_constraintBottom_toTopOf="@+id/editfooter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addRatingBar"
         app:layout_constraintVertical_bias="0.714" />
