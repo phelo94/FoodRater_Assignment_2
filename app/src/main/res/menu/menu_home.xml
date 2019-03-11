@@ -8,6 +8,12 @@
         app:showAsAction="ifRoom"
         android:onClick="menuHome"/>
 
+    <item android:id="@+id/menu_help"
+        android:title="Help"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:onClick="menuHelp"/>
+
     <item android:id="@+id/menu_info"
         android:title="Info"
         android:orderInCategory="100"
