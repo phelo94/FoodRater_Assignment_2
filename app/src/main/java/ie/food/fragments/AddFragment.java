@@ -48,7 +48,7 @@ public class AddFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.add_fragment, container, false);
-        getActivity().setTitle(R.string.addACoffeeLbl);
+        getActivity().setTitle(R.string.addAFoodLbl);
         name = v.findViewById(R.id.addNameET);
         shop =  v.findViewById(R.id.addShopET);
         prices =  v.findViewById(R.id.addPriceET);

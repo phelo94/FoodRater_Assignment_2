@@ -13,18 +13,18 @@
 
     <string name="searchFoodItemsLbl">Search Food Item\'s</string>
     <string name="favouritesFoodLbl">Favourite Food Item\'s</string>
-    <string name="addACoffeeLbl">TakeAway Check In</string>
-    <string name="addCoffeeBtnLbl">Add Food</string>
-    <string name="saveCoffeeBtn">Save Food</string>
+    <string name="addAFoodLbl">TakeAway Check In</string>
+    <string name="addFoodBtnLbl">Add Food</string>
+    <string name="saveFoodBtn">Save Food</string>
     <string name="recentlyViewedLbl">Recently Added Food Item\'s</string>
-    <string name="coffeeNameLbl">Name :</string>
-    <string name="coffeeShopLbl">Shop :</string>
-    <string name="coffeePriceLbl">Price :</string>
-    <string name="coffeeRatingLbl">Star Rating</string>
-    <string name="coffeeDetailsLbl">Full Food Item Details</string>
+    <string name="foodNameLbl">Name :</string>
+    <string name="foodShopLbl">Restaurant :</string>
+    <string name="foodPriceLbl">Price :</string>
+    <string name="foodRatingLbl">Star Rating</string>
+    <string name="foodDetailsLbl">Full Food Item Details</string>
     <string name="informationLbl">Information</string>
     <string name="emptyMessageLbl">You have no Food Item\'s added!</string>
-    <string name="deleteCoffeesLbl">Delete Food Items</string>
+    <string name="deleteFoodLbl">Delete Food Items</string>
     <string name="editFoodLbl">Edit a Food Item</string>
 
     <string-array name="foodTypes">
@@ -39,4 +39,5 @@
     <string name="title_profile">Logged In User</string>
     <string name="FoodRater">FoodRater</string>
     <string name="helpTitle">Help Screen</string>
+    <string name="foodDate">Date:</string>
 </resources>
