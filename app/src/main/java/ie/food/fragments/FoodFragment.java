@@ -212,12 +212,14 @@ public class FoodFragment extends Fragment implements
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodName)).setText(randomFood.foodName);
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodShop)).setText(randomFood.shop);
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodPrice)).setText("€ " + randomFood.price);
+                ((TextView) getActivity().findViewById(R.id.favouriteFoodDates)).setText(randomFood.foodDates);
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodRating)).setText(randomFood.rating + " *");
             }
             else {
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodName)).setText("N/A");
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodShop)).setText("N/A");
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodPrice)).setText("N/A");
+                ((TextView) getActivity().findViewById(R.id.favouriteFoodDates)).setText("N/A");
                 ((TextView) getActivity().findViewById(R.id.favouriteFoodRating)).setText("N/A");
             }
     }

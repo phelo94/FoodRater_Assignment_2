@@ -34,6 +34,7 @@ public class FoodItem {
         ((TextView) view.findViewById(R.id.rowFoodName)).setText(food.foodName);
 
         ((TextView) view.findViewById(R.id.rowFoodShop)).setText(food.shop);
+        ((TextView) view.findViewById(R.id.rowFoodDate)).setText(food.foodDates);
         ((TextView) view.findViewById(R.id.rowRating)).setText(food.rating + " *");
         ((TextView) view.findViewById(R.id.rowPrice)).setText("€" +
                 new DecimalFormat("0.00").format(food.price));
@@ -41,9 +42,9 @@ public class FoodItem {
         ImageView imgIcon = view.findViewById(R.id.rowFavouriteImg);
 
         if (food.favourite == true)
-            imgIcon.setImageResource(R.drawable.favourites_72_on);
+            imgIcon.setImageResource(R.drawable.ic_favorite_red_on);
         else
-            imgIcon.setImageResource(R.drawable.favourites_72);
+            imgIcon.setImageResource(R.drawable.ic_favorite_off);
 
 
     }

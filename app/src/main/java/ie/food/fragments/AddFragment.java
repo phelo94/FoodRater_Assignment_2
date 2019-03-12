@@ -21,10 +21,10 @@ import ie.food.models.Food;
 
 public class AddFragment extends Fragment {
 
-    private String foodName, foodShop;
+    private String foodName, foodShop, foodDates;
     private double foodPrice, ratingValue;
-    private Date date, foodDate;
-    private EditText name, shop, prices, dates;
+    //private Date date, foodDate;
+    private EditText name, shop, dates, prices;
     private RatingBar ratingBar;
     private Button saveButton;
     private FoodRaterApp app;
@@ -54,8 +54,8 @@ public class AddFragment extends Fragment {
         getActivity().setTitle(R.string.addAFoodLbl);
         name = v.findViewById(R.id.addNameET);
         shop =  v.findViewById(R.id.addShopET);
-        prices =  v.findViewById(R.id.addPriceET);
         dates =  v.findViewById(R.id.addDateET);
+        prices =  v.findViewById(R.id.addPriceET);
         ratingBar =  v.findViewById(R.id.addRatingBar);
         saveButton = v.findViewById(R.id.addFoodButton);
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +72,7 @@ public class AddFragment extends Fragment {
 
         foodName = name.getText().toString();
         foodShop = shop.getText().toString();
+        foodDates = dates.getText().toString();
         try {
             foodPrice = Double.parseDouble(prices.getText().toString());
         } catch (NumberFormatException e) {
@@ -79,10 +80,9 @@ public class AddFragment extends Fragment {
         }
         ratingValue = ratingBar.getRating();
 
-        if ((foodName.length() > 0) && (foodShop.length() > 0)
+        if ((foodName.length() > 0) && (foodShop.length() > 0) && (foodDates.length() > 0)
                 && (prices.length() > 0)) {
-            Food c = new Food(foodName, foodShop, ratingValue, foodPrice,
-                    false, date);
+            Food c = new Food(foodName, foodShop, foodDates, ratingValue, foodPrice, false);
 
             app.foodList.add(c);
             startActivity(new Intent(this.getActivity(), Home.class));

@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.muddzdev.styleabletoastlibrary.StyleableToast;
 
+import java.util.Date;
+
 import es.dmoral.toasty.Toasty;
 import ie.food.R;
 import ie.food.main.FoodRaterApp;
@@ -24,7 +26,7 @@ public class EditFragment extends Fragment {
     public boolean isFavourite;
     public Food aFood;
     public ImageView editFavourite;
-    private EditText name, shop, price;
+    private EditText name, shop, price, dates;
     private RatingBar ratingBar;
     public FoodRaterApp app;
 
@@ -70,11 +72,13 @@ public class EditFragment extends Fragment {
         name = v.findViewById(R.id.editNameET);
         shop = v.findViewById(R.id.editShopET);
         price = v.findViewById(R.id.editPriceET);
+        dates = v.findViewById(R.id.editDateET);
         ratingBar = v.findViewById(R.id.editRatingBar);
         editFavourite = v.findViewById(R.id.editFavourite);
 
         name.setText(aFood.foodName);
         shop.setText(aFood.shop);
+        dates.setText(aFood.foodDates);
         price.setText(""+ aFood.price);
         ratingBar.setRating((float) aFood.rating);
 
@@ -92,6 +96,7 @@ public class EditFragment extends Fragment {
         if (mListener != null) {
             String foodName = name.getText().toString();
             String foodShop = shop.getText().toString();
+            String foodDates = dates.getText().toString();
             String foodPriceStr = price.getText().toString();
             double ratingValue = ratingBar.getRating();
 
@@ -101,10 +106,21 @@ public class EditFragment extends Fragment {
             } catch (NumberFormatException e)
             {            foodPrice = 0.0;        }
 
-            if ((foodName.length() > 0) && (foodShop.length() > 0) && (foodPriceStr.length() > 0)) {
+            /*
+            double foodDates;
+            try {
+                foodDates = Double.parseDouble(foodDateStr);
+            } catch (NumberFormatException e)
+            {            foodDates = 00.0000;        }
+
+*/
+
+            if ((foodName.length() > 0) && (foodShop.length() > 0) && (foodPriceStr.length() > 0) && (foodDates.length() > 0))  {
                 aFood.foodName = foodName;
                 aFood.shop = foodShop;
+                aFood.foodDates = foodDates;
                 aFood.price = foodPrice;
+
                 aFood.rating = ratingValue;
 
                 if (getActivity().getSupportFragmentManager().getBackStackEntryCount() > 0) {
