@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
+import java.util.Date;
+
 import es.dmoral.toasty.Toasty;
 import ie.food.R;
 import ie.food.activities.Home;
@@ -21,7 +23,8 @@ public class AddFragment extends Fragment {
 
     private String foodName, foodShop;
     private double foodPrice, ratingValue;
-    private EditText name, shop, prices;
+    private Date date, foodDate;
+    private EditText name, shop, prices, dates;
     private RatingBar ratingBar;
     private Button saveButton;
     private FoodRaterApp app;
@@ -52,6 +55,7 @@ public class AddFragment extends Fragment {
         name = v.findViewById(R.id.addNameET);
         shop =  v.findViewById(R.id.addShopET);
         prices =  v.findViewById(R.id.addPriceET);
+        dates =  v.findViewById(R.id.addDateET);
         ratingBar =  v.findViewById(R.id.addRatingBar);
         saveButton = v.findViewById(R.id.addFoodButton);
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -77,8 +81,8 @@ public class AddFragment extends Fragment {
 
         if ((foodName.length() > 0) && (foodShop.length() > 0)
                 && (prices.length() > 0)) {
-            Food c = new Food(foodName, foodShop, ratingValue,
-                    foodPrice, false);
+            Food c = new Food(foodName, foodShop, ratingValue, foodPrice,
+                    false, date);
 
             app.foodList.add(c);
             startActivity(new Intent(this.getActivity(), Home.class));
@@ -91,7 +95,7 @@ public class AddFragment extends Fragment {
                     */
 
         Toasty.warning( getActivity(),"You must Enter Something for \"\n" +
-                        "                            + \"\\'Name\\', \\'Shop\\' and \\'Price\\'",
+                        "                            + \"\\'Name\\', \\'Shop\\' and \\'Price\\' and \\'Date\\'",
                 Toast.LENGTH_LONG, true).show();
     }
 }
