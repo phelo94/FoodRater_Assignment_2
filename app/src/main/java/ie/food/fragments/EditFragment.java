@@ -19,14 +19,6 @@ import ie.food.R;
 import ie.food.main.FoodRaterApp;
 import ie.food.models.Food;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link EditFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link EditFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class EditFragment extends Fragment {
 
     public boolean isFavourite;
@@ -87,10 +79,10 @@ public class EditFragment extends Fragment {
         ratingBar.setRating((float) aFood.rating);
 
         if (aFood.favourite == true) {
-            editFavourite.setImageResource(R.drawable.favourites_72_on);
+            editFavourite.setImageResource(R.drawable.ic_favorite_red_on);
             isFavourite = true;
         } else {
-            editFavourite.setImageResource(R.drawable.favourites_72);
+            editFavourite.setImageResource(R.drawable.ic_favorite_off);
             isFavourite = false;
         }
         return v;
@@ -130,7 +122,7 @@ public class EditFragment extends Fragment {
             aFood.favourite = false;
             Toasty.error(getActivity(), "Removed From Favourites", Toast.LENGTH_SHORT).show();
             isFavourite = false;
-            editFavourite.setImageResource(R.drawable.favourites_72);
+            editFavourite.setImageResource(R.drawable.ic_favorite_off);
         } else {
             aFood.favourite = true;
            // StyleableToast.makeText(getActivity(), "Added",R.style.exampleToast).show();
@@ -139,7 +131,7 @@ public class EditFragment extends Fragment {
                     Toast.LENGTH_SHORT, true).show();
 
             isFavourite = true;
-            editFavourite.setImageResource(R.drawable.favourites_72_on);
+            editFavourite.setImageResource(R.drawable.ic_favorite_red_on);
         }
     }
 
