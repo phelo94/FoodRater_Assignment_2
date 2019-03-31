@@ -34,7 +34,7 @@ public class FoodItem {
         ((TextView) view.findViewById(R.id.rowFoodName)).setText(food.foodName);
 
         ((TextView) view.findViewById(R.id.rowFoodShop)).setText(food.shop);
-        ((TextView) view.findViewById(R.id.rowFoodDate)).setText(food.foodDates);
+        ((TextView) view.findViewById(R.id.rowFoodDate)).setText(food.date);
         ((TextView) view.findViewById(R.id.rowRating)).setText(food.rating + " *");
         ((TextView) view.findViewById(R.id.rowPrice)).setText("€" +
                 new DecimalFormat("0.00").format(food.price));

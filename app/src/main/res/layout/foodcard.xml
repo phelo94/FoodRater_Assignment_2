@@ -27,7 +27,7 @@
             android:layout_marginBottom="8dp"
             android:contentDescription="fav"
             android:gravity="center_vertical"
-            android:src="@drawable/favourites_72" />
+            android:src="@drawable/ic_favorite_off" />
 
         <ImageView
             android:id="@+id/rowDeleteImg"
@@ -38,9 +38,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginRight="152dp"
             android:contentDescription="fav"
-            android:src="@android:drawable/ic_delete" />
+            android:src="@drawable/ic_delete_red" />
 
         <TextView
             android:id="@+id/rowFoodName"
@@ -49,6 +49,7 @@
             android:layout_alignTop="@+id/rowFavouriteImg"
             android:layout_alignParentStart="true"
             android:layout_marginStart="68dp"
+            android:layout_marginTop="-7dp"
             android:gravity="center_vertical"
             android:text="Food Name"
             android:textColor="@color/colorPrimary"
@@ -61,8 +62,24 @@
             android:layout_height="16dp"
             android:layout_alignStart="@+id/rowFoodName"
             android:layout_alignBottom="@+id/rowFavouriteImg"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="-7dp"
             android:gravity="center_vertical"
             android:text="Takeaway Resturant"
+            android:textColor="@color/colorFontBlack"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/rowFoodDate"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/rowFoodName"
+            android:layout_alignBottom="@+id/rowFavouriteImg"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_vertical"
+            android:text="Date"
             android:textColor="@color/colorFontBlack"
             android:textSize="11sp"
             android:textStyle="bold" />
@@ -73,7 +90,8 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/rowFavouriteImg"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="71dp"
+            android:layout_marginEnd="93dp"
+            android:layout_marginBottom="-7dp"
             android:gravity="center_vertical"
             android:text="5.0 *"
             android:textColor="@color/colorFontBlack"
@@ -86,6 +104,8 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/rowRating"
             android:layout_alignTop="@+id/rowFoodName"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="-1dp"
             android:gravity="center_vertical"
             android:text="€3.99"
             android:textColor="@color/colorPrimary"

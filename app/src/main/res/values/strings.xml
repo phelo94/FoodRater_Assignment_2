@@ -19,6 +19,7 @@
     <string name="recentlyViewedLbl">Recently Added Food Item\'s</string>
     <string name="foodNameLbl">Name :</string>
     <string name="foodShopLbl">Restaurant :</string>
+    <string name="foodDateLbl">Date :</string>
     <string name="foodPriceLbl">Price :</string>
     <string name="foodRatingLbl">Star Rating</string>
     <string name="foodDetailsLbl">Full Food Item Details</string>
@@ -39,5 +40,5 @@
     <string name="title_profile">Logged In User</string>
     <string name="FoodRater">FoodRater</string>
     <string name="helpTitle">Help Screen</string>
-    <string name="foodDate">Date:</string>
+
 </resources>

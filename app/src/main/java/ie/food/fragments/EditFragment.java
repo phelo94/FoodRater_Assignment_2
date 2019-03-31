@@ -26,7 +26,7 @@ public class EditFragment extends Fragment {
     public boolean isFavourite;
     public Food aFood;
     public ImageView editFavourite;
-    private EditText name, shop, price, dates;
+    private EditText name, shop, price, date;
     private RatingBar ratingBar;
     public FoodRaterApp app;
 
@@ -71,14 +71,14 @@ public class EditFragment extends Fragment {
 
         name = v.findViewById(R.id.editNameET);
         shop = v.findViewById(R.id.editShopET);
+        date = v.findViewById(R.id.editDateET);
         price = v.findViewById(R.id.editPriceET);
-        dates = v.findViewById(R.id.editDateET);
         ratingBar = v.findViewById(R.id.editRatingBar);
         editFavourite = v.findViewById(R.id.editFavourite);
 
         name.setText(aFood.foodName);
         shop.setText(aFood.shop);
-        dates.setText(aFood.foodDates);
+        date.setText(aFood.date);
         price.setText(""+ aFood.price);
         ratingBar.setRating((float) aFood.rating);
 
@@ -96,7 +96,7 @@ public class EditFragment extends Fragment {
         if (mListener != null) {
             String foodName = name.getText().toString();
             String foodShop = shop.getText().toString();
-            String foodDates = dates.getText().toString();
+            String foodDate = date.getText().toString();
             String foodPriceStr = price.getText().toString();
             double ratingValue = ratingBar.getRating();
 
@@ -115,10 +115,10 @@ public class EditFragment extends Fragment {
 
 */
 
-            if ((foodName.length() > 0) && (foodShop.length() > 0) && (foodPriceStr.length() > 0) && (foodDates.length() > 0))  {
+            if ((foodName.length() > 0) && (foodShop.length() > 0) && (foodDate.length() > 0)  && (foodPriceStr.length() > 0) )  {
                 aFood.foodName = foodName;
                 aFood.shop = foodShop;
-                aFood.foodDates = foodDates;
+                aFood.date = foodDate;
                 aFood.price = foodPrice;
 
                 aFood.rating = ratingValue;

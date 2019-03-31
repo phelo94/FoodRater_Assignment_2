@@ -9,7 +9,7 @@ public class Food implements Serializable
 	public String foodId;
 	public String foodName;
 	public String shop;
-	public String foodDates;
+	public String date;
 	public double rating;
 	public double price;
 
@@ -20,12 +20,12 @@ public class Food implements Serializable
 
 	public Food() {}
 
-	public Food(String name, String shop, String dates, double rating, double price, boolean fav)
+	public Food(String name, String shop, String date, double rating, double price, boolean fav)
 	{
 		this.foodId = UUID.randomUUID().toString();
 		this.foodName = name;
 		this.shop = shop;
-		this.foodDates = dates;
+		this.date = date;
 		this.rating = rating;
 		this.price = price;
 		this.favourite = fav;
@@ -35,7 +35,9 @@ public class Food implements Serializable
 
 	@Override
 	public String toString() {
-		return foodId + " " + foodName + ", " + shop + ", " + foodDates + ", " + rating
+		return foodId + " " + foodName + ", " + date + ", " + shop + ", " + rating
 				+ ", " + price + ", fav =" + favourite;
 	}
 }
+
+//+ foodDates + ", "

@@ -21,10 +21,10 @@ import ie.food.models.Food;
 
 public class AddFragment extends Fragment {
 
-    private String foodName, foodShop, foodDates;
+    private String foodName, foodShop, foodDate;
     private double foodPrice, ratingValue;
     //private Date date, foodDate;
-    private EditText name, shop, dates, prices;
+    private EditText name, shop, prices, date;
     private RatingBar ratingBar;
     private Button saveButton;
     private FoodRaterApp app;
@@ -54,7 +54,7 @@ public class AddFragment extends Fragment {
         getActivity().setTitle(R.string.addAFoodLbl);
         name = v.findViewById(R.id.addNameET);
         shop =  v.findViewById(R.id.addShopET);
-        dates =  v.findViewById(R.id.addDateET);
+        date =  v.findViewById(R.id.addDateET);
         prices =  v.findViewById(R.id.addPriceET);
         ratingBar =  v.findViewById(R.id.addRatingBar);
         saveButton = v.findViewById(R.id.addFoodButton);
@@ -72,17 +72,19 @@ public class AddFragment extends Fragment {
 
         foodName = name.getText().toString();
         foodShop = shop.getText().toString();
-        foodDates = dates.getText().toString();
+        foodDate = date.getText().toString();
         try {
             foodPrice = Double.parseDouble(prices.getText().toString());
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException e)
+        {
             foodPrice = 0.0;
         }
+
         ratingValue = ratingBar.getRating();
 
-        if ((foodName.length() > 0) && (foodShop.length() > 0) && (foodDates.length() > 0)
-                && (prices.length() > 0)) {
-            Food c = new Food(foodName, foodShop, foodDates, ratingValue, foodPrice, false);
+        if ((foodName.length() > 0) && (foodShop.length() > 0) && (foodDate.length() > 0) && (prices.length() > 0))
+        {
+            Food c = new Food(foodName, foodShop, foodDate, ratingValue, foodPrice, false);
 
             app.foodList.add(c);
             startActivity(new Intent(this.getActivity(), Home.class));
@@ -95,7 +97,7 @@ public class AddFragment extends Fragment {
                     */
 
         Toasty.warning( getActivity(),"You must Enter Something for \"\n" +
-                        "                            + \"\\'Name\\', \\'Shop\\' and \\'Price\\' and \\'Date\\'",
+                        "                            + \"\\'Name\\', \\'Shop\\'  and \\'Date\\' and \\'Price\\'",
                 Toast.LENGTH_LONG, true).show();
     }
 }
