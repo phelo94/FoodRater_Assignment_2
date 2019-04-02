@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ie.food">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
         android:name=".main.FoodRaterApp"
         android:allowBackup="true"
@@ -15,6 +18,11 @@
         <activity android:name=".registration.ProfileActivity" />
         <activity android:name=".registration.LoginActivity" />
         <activity android:name=".registration.SignUpActivity" />
+        <activity android:name=".grocery.GroceryHome">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.Home"/>
+        </activity>
         <activity
             android:name=".notes.NewMealActivity"
             android:parentActivityName=".notes.MealActivity" />

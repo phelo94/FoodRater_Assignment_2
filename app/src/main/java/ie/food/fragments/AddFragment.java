@@ -49,6 +49,10 @@ public class AddFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        //title on toolbar
+       // ((Home)getActivity()).setActionBarTitle("Add Food");
+
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.add_fragment, container, false);
         getActivity().setTitle(R.string.addAFoodLbl);

@@ -42,3 +42,4 @@ public class FoodListAdapter extends ArrayAdapter<Food>
         return foodList.get(position);
     }
 }
+

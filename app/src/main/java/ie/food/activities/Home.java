@@ -25,7 +25,9 @@ import ie.food.R;
 import ie.food.fragments.AddFragment;
 import ie.food.fragments.FoodFragment;
 import ie.food.fragments.EditFragment;
+import ie.food.fragments.MessageFragment;
 import ie.food.fragments.SearchFragment;
+import ie.food.grocery.GroceryHome;
 import ie.food.notes.MealActivity;
 import ie.food.journal.JournalListActivity;
 import ie.food.registration.LoginActivity;
@@ -99,23 +101,31 @@ public class Home extends Base
             }
         });
 
+        //open the menu for nav drawer
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        //set nav drawer
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
         ft = getSupportFragmentManager().beginTransaction();
 
+        //first page displayed
         FoodFragment fragment = FoodFragment.newInstance();
         ft.replace(R.id.homeFrame, fragment);
         ft.commit();
 
         this.setupFoods();
         this.setTitle(R.string.recentlyViewedLbl);
+    }
+
+    public void setActionBarTitle(String title){
+        getSupportActionBar().setTitle(title);
     }
 
     @Override
@@ -164,20 +174,13 @@ public class Home extends Base
             ft.addToBackStack(null);
             ft.commit();
 
-        } else if (id == R.id.nav_note) {
-            fragment = AddFragment.newInstance();
-            ft.replace(R.id.homeFrame, fragment);
-            ft.addToBackStack(null);
-            ft.commit();
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_camera) {
-
+        } else if (id == R.id.nav_grocery) {
+            Intent i = new Intent(Home.this, GroceryHome.class);
+            startActivity(i);
 
         }
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -224,3 +227,42 @@ public class Home extends Base
         return true;
     }
 }
+
+            /*
+
+new one
+
+} else if (id == R.id.nav_message) {
+            Intent i = new Intent(Home.this,MessageFragment.class);
+            startActivity(i);
+        }
+
+
+        old one
+
+        else if (id == R.id.nav_message) {
+            fragment = MessageFragment.newInstance();
+            ft.replace(R.id.homeFrame, fragment);
+            ft.addToBackStack(null);
+            ft.commit();
+
+        }
+
+
+ public void menuJournal(MenuItem m) {
+        startActivity(new Intent(this, JournalListActivity.class));
+
+
+            else if (id == R.id.nav_note) {
+            fragment = AddFragment.newInstance();
+            ft.replace(R.id.homeFrame, fragment);
+            ft.addToBackStack(null);
+            ft.commit();
+
+
+
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_camera) {
+ */

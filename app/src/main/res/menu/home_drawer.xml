@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_View">
 
     <group android:checkableBehavior="single">
         <item
@@ -22,6 +24,14 @@
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
             android:title="Take a Photo" />
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/ic_message"
+            android:title="Add Message" />
+        <item
+            android:id="@+id/nav_grocery"
+            android:icon="@drawable/ic_grocery"
+            android:title="Add Grocery List" />
         <item
             android:id="@+id/nav_note"
             android:icon="@drawable/ic_note"
