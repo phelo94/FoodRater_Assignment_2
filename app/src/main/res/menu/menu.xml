@@ -18,7 +18,7 @@
         app:showAsAction="ifRoom" />
 -->
     <item android:id="@+id/menu_home"
-        android:icon="@drawable/home"
+        android:icon="@drawable/house"
         android:title="Home"
         android:orderInCategory="100"
         app:showAsAction="ifRoom"

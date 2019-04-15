@@ -28,10 +28,12 @@ import ie.food.fragments.EditFragment;
 import ie.food.fragments.MessageFragment;
 import ie.food.fragments.SearchFragment;
 import ie.food.grocery.GroceryHome;
+import ie.food.image.ImageActivity;
 import ie.food.notes.MealActivity;
 import ie.food.journal.JournalListActivity;
 import ie.food.registration.LoginActivity;
 import ie.food.registration.ProfileActivity;
+import ie.food.signin.SigninActivity;
 
 public class Home extends Base
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -78,6 +80,12 @@ public class Home extends Base
         startActivity(new Intent(this, JournalListActivity.class));
 
     }
+
+    public void menuImage(MenuItem m) {
+        startActivity(new Intent(this, ImageActivity.class));
+
+    }
+
 //new code up
     @Override
     protected void onCreate(Bundle savedInstanceState) {
