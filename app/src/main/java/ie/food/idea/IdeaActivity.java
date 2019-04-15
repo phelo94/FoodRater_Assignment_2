@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -12,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,6 +24,11 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import ie.food.R;
+import ie.food.activities.Home;
+import ie.food.journal.JournalListActivity;
+import ie.food.notes.MealActivity;
+import ie.food.registration.LoginActivity;
+import ie.food.registration.ProfileActivity;
 
 public class IdeaActivity extends AppCompatActivity implements ExampleAdapter.OnItemClickListener {
     public static final String EXTRA_URL = "imageUrl";
@@ -94,5 +103,51 @@ public class IdeaActivity extends AppCompatActivity implements ExampleAdapter.On
         detailIntent.putExtra(EXTRA_LIKES, clickedItem.getLikeCount());
 
         startActivity(detailIntent);
+    }
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_note, menu);
+
+        return true;
+
+    }
+    public void menuHome(MenuItem m) {
+        startActivity(new Intent(this, Home.class));
+    }
+    public void menuJournal(MenuItem m) {
+        startActivity(new Intent(this, JournalListActivity.class));
+
+    }
+    public void menuNote(MenuItem m) {
+        startActivity(new Intent(this, MealActivity.class));
+    }
+
+    public void menuProfile(MenuItem m) {
+        startActivity(new Intent(this, ProfileActivity.class));
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.menuLogout:
+                //case R.id.menuHome:
+
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                startActivity(new Intent(this, LoginActivity.class));
+
+                // startActivity(new Intent(this, Home.class));
+
+                break;
+        }
+
+        return true;
     }
 }

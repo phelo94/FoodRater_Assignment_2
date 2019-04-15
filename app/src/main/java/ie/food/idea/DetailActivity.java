@@ -1,14 +1,23 @@
 package ie.food.idea;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
 import ie.food.R;
+import ie.food.activities.Home;
+import ie.food.image.ImageActivity;
+import ie.food.journal.JournalListActivity;
+import ie.food.notes.MealActivity;
+import ie.food.registration.ProfileActivity;
 
 import static ie.food.idea.IdeaActivity.EXTRA_CREATOR;
 import static ie.food.idea.IdeaActivity.EXTRA_LIKES;
@@ -34,4 +43,58 @@ public class DetailActivity extends AppCompatActivity {
         textViewCreator.setText(creatorName);
         textViewLikes.setText("Likes: " + likeCount);
     }
+
+    //new code down
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_home, menu);
+        return true;
+    }
+
+    public void menuHome(MenuItem m) {
+        startActivity(new Intent(this, Home.class));
+    }
+
+    public void menuInfo(MenuItem m) {
+        new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.appAbout))
+                .setMessage(getString(R.string.appDesc)
+                        + "\n\n"
+                        + getString(R.string.appMoreInfo))
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+                .show();
+    }
+
+    public void menuNote(MenuItem m) {
+        startActivity(new Intent(this, MealActivity.class));
+        //startActivity(new Intent(this, JournalActivity.class));
+
+    }
+
+    public void menuProfile(MenuItem m) {
+        startActivity(new Intent(this, ProfileActivity.class));
+
+    }
+
+    public void menuJournal(MenuItem m) {
+        startActivity(new Intent(this, JournalListActivity.class));
+
+    }
+
+    public void menuImage(MenuItem m) {
+        startActivity(new Intent(this, ImageActivity.class));
+
+    }
+
+    public void menuIdea(MenuItem m) {
+        startActivity(new Intent(this, IdeaActivity.class));
+
+    }
+
+//new code up
+
 }
