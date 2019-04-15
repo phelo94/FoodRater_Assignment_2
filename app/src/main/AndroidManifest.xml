@@ -11,7 +11,8 @@
         android:label="Food Rater"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".image.ImagesActivity"></activity>
+        <activity android:name=".idea.IdeaActivity"></activity>
+        <activity android:name=".image.ImagesActivity" />
         <activity android:name=".signin.LogoutActivity" />
         <activity android:name=".signin.SigninActivity" />
         <activity android:name=".image.ImageActivity" />

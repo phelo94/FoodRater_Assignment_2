@@ -28,6 +28,7 @@ import ie.food.fragments.EditFragment;
 import ie.food.fragments.MessageFragment;
 import ie.food.fragments.SearchFragment;
 import ie.food.grocery.GroceryHome;
+import ie.food.idea.IdeaActivity;
 import ie.food.image.ImageActivity;
 import ie.food.notes.MealActivity;
 import ie.food.journal.JournalListActivity;
@@ -83,6 +84,11 @@ public class Home extends Base
 
     public void menuImage(MenuItem m) {
         startActivity(new Intent(this, ImageActivity.class));
+
+    }
+
+    public void menuIdea(MenuItem m) {
+        startActivity(new Intent(this, IdeaActivity.class));
 
     }
 

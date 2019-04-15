@@ -8,18 +8,6 @@
         app:showAsAction="ifRoom"
         android:onClick="menuHome"/>
 
-    <item android:id="@+id/menu_help"
-        android:title="Help"
-        android:orderInCategory="100"
-        app:showAsAction="never"
-        android:onClick="menuHelp"/>
-
-    <item android:id="@+id/menu_info"
-        android:title="Info"
-        android:orderInCategory="100"
-        app:showAsAction="never"
-        android:onClick="menuInfo"/>
-
     <item android:id="@+id/menu_note"
         android:title="Notes"
         android:orderInCategory="100"
@@ -43,6 +31,12 @@
         android:orderInCategory="100"
         app:showAsAction="never"
         android:onClick="menuImage"/>
+
+    <item android:id="@+id/menu_idea"
+        android:title="Idea"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:onClick="menuIdea"/>
 
     <item
         android:id="@+id/menuLogout"
