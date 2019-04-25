@@ -25,25 +25,18 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="Take a Photo" />
         <item
-            android:id="@+id/nav_message"
-            android:icon="@drawable/ic_message"
-            android:title="Add Message" />
-        <item
             android:id="@+id/nav_grocery"
             android:icon="@drawable/ic_grocery"
             android:title="Add Grocery List" />
         <item
-            android:id="@+id/nav_note"
-            android:icon="@drawable/ic_note"
-            android:title="Add Note" />
+            android:id="@+id/nav_idea"
+            android:icon="@drawable/ic_lightbulb"
+            android:title="Food Ideas" />
+
     </group>
 
     <item android:title="Communicate &amp; Locate">
         <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
             <item
                 android:id="@+id/nav_map"
                 android:icon="@drawable/ic_menu_map"

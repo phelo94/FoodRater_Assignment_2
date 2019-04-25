@@ -27,9 +27,11 @@ import ie.food.fragments.FoodFragment;
 import ie.food.fragments.EditFragment;
 import ie.food.fragments.MessageFragment;
 import ie.food.fragments.SearchFragment;
+import ie.food.google.MapsActivity;
 import ie.food.grocery.GroceryHome;
 import ie.food.idea.IdeaActivity;
 import ie.food.image.ImageActivity;
+import ie.food.maps.MainActivity;
 import ie.food.notes.MealActivity;
 import ie.food.journal.JournalListActivity;
 import ie.food.registration.LoginActivity;
@@ -196,6 +198,23 @@ public class Home extends Base
 
         } else if (id == R.id.nav_grocery) {
             Intent i = new Intent(Home.this, GroceryHome.class);
+            startActivity(i);
+
+        }
+
+        else if (id == R.id.nav_camera) {
+            Intent i = new Intent(Home.this, ImageActivity.class);
+            startActivity(i);
+
+        }
+
+        else if (id == R.id.nav_map) {
+            Intent i = new Intent(Home.this, MainActivity.class);
+            startActivity(i);
+
+        }
+        else if (id == R.id.nav_idea) {
+            Intent i = new Intent(Home.this, IdeaActivity.class);
             startActivity(i);
 
         }

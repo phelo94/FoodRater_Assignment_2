@@ -4,6 +4,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="app_name">FoodRater</string>
+    <string name="map_key" translatable="false">AIzaSyAy990njBsVxir4Mfwty9-SO0DXZaVDgfo</string>
+    <string name="google_maps_key">AIzaSyAy990njBsVxir4Mfwty9-SO0DXZaVDgfo</string>
     <string name="appHelp">FoodRater Help Screen</string>
     <string name="appHelpExtra">FoodRater offers the User the option to keep track of their favourite foods from takeaways.</string>
     <string name="appDisplayName">FoodRater</string>
@@ -40,5 +42,6 @@
     <string name="title_profile">Logged In User</string>
     <string name="FoodRater">FoodRater</string>
     <string name="helpTitle">Help Screen</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
