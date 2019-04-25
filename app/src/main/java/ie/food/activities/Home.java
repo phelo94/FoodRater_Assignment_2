@@ -35,6 +35,7 @@ import ie.food.journal.JournalListActivity;
 import ie.food.registration.LoginActivity;
 import ie.food.registration.ProfileActivity;
 import ie.food.signin.SigninActivity;
+import ie.food.youtube.Youtube;
 
 public class Home extends Base
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -89,6 +90,11 @@ public class Home extends Base
 
     public void menuIdea(MenuItem m) {
         startActivity(new Intent(this, IdeaActivity.class));
+
+    }
+
+    public void menuYoutube(MenuItem m) {
+        startActivity(new Intent(this, Youtube.class));
 
     }
 

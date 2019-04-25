@@ -27,16 +27,22 @@
         android:onClick="menuProfile"/>
 
     <item android:id="@+id/menu_image"
-        android:title="Image"
+        android:title="Favourite Food Image"
         android:orderInCategory="100"
         app:showAsAction="never"
         android:onClick="menuImage"/>
 
     <item android:id="@+id/menu_idea"
-        android:title="Idea"
+        android:title="Food Ideas"
         android:orderInCategory="100"
         app:showAsAction="never"
         android:onClick="menuIdea"/>
+
+    <item android:id="@+id/menu_youtube"
+        android:title="Youtube Videos"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:onClick="menuYoutube"/>
 
     <item
         android:id="@+id/menuLogout"

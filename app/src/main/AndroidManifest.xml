@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ie.food">
+    package="ie.food"
+    android:installLocation="preferExternal">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +12,8 @@
         android:label="Food Rater"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".idea.DetailActivity"></activity>
+        <activity android:name=".youtube.Youtube"></activity>
+        <activity android:name=".idea.DetailActivity" />
         <activity android:name=".idea.IdeaActivity" />
         <activity android:name=".image.ImagesActivity" />
         <activity android:name=".signin.LogoutActivity" />
